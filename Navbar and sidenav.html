@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!--Import materialize.css-->
+     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Navbar and Side Nav</title>
+</head>
+<body>
+    <div class="container">
+        <h4 class="blue-grey-text darken-3">Navbar</h4>
+        <div class="divider"></div>
+        <p>The navbar is fully contained by an HTML5 Nav tag. Inside a recommended container div, there are 2 main parts of the navbar. A logo or brand link, and the navigations links. You can align these links to the left or right.</p>
+
+        <!--Right aligned and extended nav with tab-->
+        <h4 class="blue-grey-text darken-3">Right Aligned Links</h4>
+        <p>To right align your navbar links, just add a right class to your <ul> that contains them.</p>
+            <nav class="nav-extended">
+                <div class="nav-wrapper teal darken-3">
+                    <a href="#" class="brand-logo">Bien's Web Design</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a ref="Index.html"></a>Index</li>
+                        <li><a ref="cards.html">Cards</a></li>
+                        <li><a ref="Buttons.html">Buttons</a></li>
+                    </ul>
+                </div>
+                <div class="nav-content">
+                    <ul class="tabs teal darken-3">
+                        <li class="tab"><a href="Buttons.html">Buttons</a></li>
+                        <li class="tab"><a href="Index.html">Index</a></li>
+                        <li class="tab disabled"><a href="Cards.html">Disabled Tab</a></li>
+                        <li class="tab"><a href="Grid.html">Grid</a></li>
+                    </ul>
+                    
+                </div>
+            </nav>
+
+<!--Active Items & Navbar fixed-->
+        <h4 class="blue-grey-text darken-3">Active Items and Dropdown</h4>       
+        <p>Add active class to your li tags to denote the current page.</p>
+<!--Dropdown Structure-->
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="#!">One</a>
+                <li><a href="#!">Two</a>
+                <li class="divider"></li>
+                <li><a href="#!">three</a>  
+            </ul>
+            <nav>
+                <div class="nav-wrapper teal darken-3">
+                    <a href="#!" class="brand-logo">Bien's Web Design</a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="Index.html">Index</a>/li>
+                        <li><a href="cards.html">Cards</a>/li>  
+                        <li class="active"><a href="Buttons.html">Buttons</a></li>
+                        <!--Dropdown Trigger-->
+                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i><a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    <br>
+
+    <!--Sidenav-->
+    <div class="container">
+        <h4 class="blue-grey-text darken-3">Sidenav</h4>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <nav class="nav-extended">
+            <div class="nav-wrapper teal darken-3">
+                <a href="#" class="brand-logo">Bien's Web Design</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a ref="Index.html"></a>Index</li>
+                    <li><a ref="cards.html">Cards</a></li>
+                    <li><a ref="Buttons.html">Buttons</a></li>
+                </ul>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs teal darken-3">
+                    <li class="tab"><a href="Buttons.html">Buttons</a></li>
+                    <li class="tab"><a href="Index.html">Index</a></li>
+                    <li class="tab disabled"><a href="Cards.html">Disabled Tab</a></li>
+                    <li class="tab"><a href="Grid.html">Grid</a></li>
+                </ul>
+                
+            </div>
+        </nav>
+        <ul id="slide-out" class="sidenav">
+            <li><div class="user-view">
+                <div class="background" width="100" height="100">
+                    <img src="coding.jpg">
+                </div>
+                <a href="#user"><img class="circle" src="MYSELF.png"></a>
+                <a href="name"><span class="white-text name">Bien Gunay</span>
+                <a href="email"><span class="white-text email">sample@email.com</span>
+            </div></li>
+            <li><a href="#!"><i class="material-icons">grade</i>First Link With Icon</a></li>
+            <li><a href="#!">Second Link</a>
+            <li><div class="subheader"></div>
+            <li><a class="subheader">Bien's output</a>
+            <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+        </ul>
+    </div>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+</div>
+
+<!--Jquery CDN-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        $(".dropdown-trigger").dropdown();
+    </script>
+
+    <script>
+        $(document).ready(function(){
+    $('.sidenav').sidenav();
+    edge:'left'
+      });
+     
+    </script>
+
+</body>
+</html>
